@@ -25,7 +25,7 @@ source build/envsetup.sh
 [ ! -z "${EXTRA_CMD}" ] && eval ${EXTRA_CMD}
 
 # Lunch the target
-lunch ${LUNCH_COMBO}
+lunch ${LUNCH_COMBO} || abort "Lunch Failed!"
 
 # Start building
 mka -j$(nproc) ${TARGET} | tee build.log > /dev/null
