@@ -15,6 +15,9 @@ export LUNCH_COMBO=""
 export TARGET=(
 )
 
+# Our output file
+OUTPUT=""
+
 # Device trees and dependencies
 DT_LINK=""
 DT_BRANCH=""

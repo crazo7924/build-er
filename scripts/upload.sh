@@ -29,6 +29,11 @@ transfer wet ${OUTPUT}
 info "Mirroring to https://oshi.at"
 curl -F f=@$(ls ${OUTPUT}) -F shorturl=0 -F expire=43200 | tee
 
+# Haste some files
+for file in $(ls *.txt *.json); do
+	printf "%s: %s\n" "$file" "$(haste $file)"
+done
+
 # Done!
 succeed "Done!"
 
