@@ -3,22 +3,22 @@
 #
 
 # Manifest
-export MANIFEST="https://github.com/ArrowOS/android_manifest.git"
-export MANIFEST_BRANCH="arrow-12.1"
+export MANIFEST="https://github.com/crdroidandroid/android.git"
+export MANIFEST_BRANCH="13.0"
 
 # Device info
-export DEVICE="evergo"
+export DEVICE="rosemary"
 export OEM="xiaomi"
 
 # Lunch combo and Build target
-export LUNCH_COMBO="arrow_evergo-eng"
+export LUNCH_COMBO="lineage_rosemary-userdebug"
 export TARGET="bacon"
 
 # Our output file
-OUTPUT="Arrow-*.zip"
+OUTPUT="CrDroid-*.zip"
 
 # Device trees and dependencies
-DT_LINK="https://github.com/Xiaomi-MT6833/device_xiaomi_evergo.git"
+DT_LINK="https://github.com/sergeantkakashi/device_redmi_rosemary.git"
 DT_BRANCH=""
 
 VT_LINK=""
@@ -27,17 +27,14 @@ KERNEL_SRC="https://github.com/PixelExperience-Devices/kernel_redmi_rosemary.git
 KERNEL_PATH="kernel/${OEM}/${DEVICE}"
 
 DEPS=(
-	"https://github.com/ArrowOS-Devices/android_hardware_xiaomi.git -b arrow-12.1 hardware/xiaomi"
+	"https://github.com/crdroidandroid/android_hardware_xiaomi.git -b 13.0 hardware/xiaomi"
 )
 
 # Generate Vendor tree?
 GEN_VT=true
-DUMP_LINK="https://gitlab.com/Android-Dumps/redmi/evergo.git"
+DUMP_LINK="http://code.input.sh/DumprX/redmi/rosemary.git"
 DUMP_PATH="$HOME/dumps/${DEVICE}"
 
-# Extra Command
-extra_cmd_function(){
-	sed -i 's/rosemary/evergo/g' device/xiaomi/evergo/BoardConfig.mk
 }
 
 EXTRA_CMD=extra_cmd_function;
