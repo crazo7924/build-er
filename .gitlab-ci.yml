@@ -22,5 +22,6 @@ build:
 
   script:
     - bash scripts/sync.sh
+    - bash scripts/clone.sh
     - bash scripts/build.sh
     - bash scripts/upload.sh
