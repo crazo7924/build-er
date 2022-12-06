@@ -3,36 +3,36 @@
 #
 
 # Manifest
-export MANIFEST="https://github.com/crdroidandroid/android.git"
-export MANIFEST_BRANCH="13.0"
+export MANIFEST="https://github.com/PixelExperience/manifest.git"
+export MANIFEST_BRANCH="eleven"
 
 # Device info
-export DEVICE="rosemary"
-export OEM="xiaomi"
+export DEVICE="k1002"
+export OEM="malata"
 
 # Lunch combo and Build target
-export LUNCH_COMBO="lineage_rosemary-userdebug"
+export LUNCH_COMBO="aosp_k1002-eng"
 export TARGET="bacon"
 
 # Our output file
-OUTPUT="CrDroid-*.zip"
+OUTPUT="PixelExperience-*.zip"
 
 # Device trees and dependencies
-DT_LINK="https://github.com/sergeantkakashi/device_redmi_rosemary"
-DT_BRANCH=""
+DT_LINK="https://github.com/sergeantkakashi/device_malata_k1002.git"
+DT_BRANCH="eleven"
 
 VT_LINK=""
 
-KERNEL_SRC="https://github.com/PixelExperience-Devices/kernel_redmi_rosemary.git"
-KERNEL_PATH="kernel/${OEM}/${DEVICE}"
+KERNEL_SRC=""
+KERNEL_PATH=""
 
 DEPS=(
-	"https://github.com/crdroidandroid/android_hardware_xiaomi.git -b 13.0 hardware/xiaomi"
+	""
 )
 
 # Generate Vendor tree?
 GEN_VT=true
-DUMP_LINK="http://code.input.sh/DumprX/redmi/rosemary.git"
+DUMP_LINK="http://code.input.sh/DumprX/unowhy/Y10G001S4M.git"
 DUMP_PATH="$HOME/dumps/${DEVICE}"
 
 }
