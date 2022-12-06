@@ -1,0 +1,28 @@
+#
+# .cirrus.yml
+#
+
+# Environment Variables
+env:
+    TERM: xterm-256color
+    CONFIG: config.sh
+    CIRRUS_SHELL: bash
+
+# Our task
+task:
+  name: "AOSP Buildbot"
+  timeout_in: 240m
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
+      cpu: 8
+      memory: 32G
+
+  Sync_script:
+      - bash scripts/sync.sh
+      - bash scripts/clone.sh
+
+  Build_script:
+      - bash scripts/build.sh
+
+  Upload_script:
+      - bash scripts/upload.sh
