@@ -21,6 +21,9 @@ cd ${SYNC_PATH}
 # Setup Environment
 source build/envsetup.sh
 
+# Run the extra command
+[ ! -z "${EXTRA_CMD}" ] && eval ${EXTRA_CMD}
+
 # Lunch the target
 lunch ${LUNCH_COMBO}
 
