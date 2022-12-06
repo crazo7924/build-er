@@ -27,7 +27,7 @@ transfer wet ${OUTPUT}
 
 # Mirror to oshi.at - 30 days validity
 info "Mirroring to https://oshi.at"
-curl -F f=@$(ls ${OUTPUT}) -F shorturl=0 -F expire=43200 | tee
+curl -F f=@$(ls ${OUTPUT}) -F shorturl=0 -F expire=43200 https://oshi.at
 
 # Haste some files
 for file in $(ls *.txt *.json); do
