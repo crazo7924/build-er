@@ -18,7 +18,7 @@ export TARGET="bacon"
 OUTPUT="CrDroid-*.zip"
 
 # Device trees and dependencies
-DT_LINK="https://github.com/sergeantkakashi/device_redmi_rosemary.git"
+DT_LINK="https://github.com/sergeantkakashi/device_redmi_rosemary"
 DT_BRANCH=""
 
 VT_LINK=""
