@@ -1,0 +1,26 @@
+#
+# .gitlab-ci.yml
+#
+
+# Copyright (C) 2022 Sushrut1101 Open Source
+# LICENCE: MIT
+
+# Arch Linux Based
+image: ghcr.io/sushrut1101/docker:arch
+
+# Set some variables
+variables:
+  TERM: "xterm-256color"
+  CONFIG: "config.sh"
+
+# Build Job
+build:
+  stage: build
+
+  # Use max possible timeout
+  timeout: 1 Day
+
+  script:
+    - bash scripts/sync.sh
+    - bash scripts/build.sh
+    - bash scripts/upload.sh
