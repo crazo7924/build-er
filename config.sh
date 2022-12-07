@@ -3,28 +3,28 @@
 #
 
 # Manifest
-export MANIFEST="https://github.com/PixelExperience/manifest.git"
-export MANIFEST_BRANCH="eleven"
+export MANIFEST="https://github.com/ArrowOS/android_manifest.git"
+export MANIFEST_BRANCH="arrow-13.0"
 
 # Device info
-export DEVICE="k1002"
-export OEM="malata"
+export DEVICE="berlin"
+export OEM="motorola"
 
 # Lunch combo and Build target
-export LUNCH_COMBO="aosp_k1002-eng"
+export LUNCH_COMBO="arrow_berlin-eng"
 export TARGET="bacon"
 
 # Our output file
-OUTPUT="PixelExperience-*.zip"
+OUTPUT="Arrow-*.zip"
 
 # Device trees and dependencies
-DT_LINK="https://github.com/sergeantkakashi/device_malata_k1002.git"
-DT_BRANCH="eleven"
+DT_LINK="https://github.com/sergeantkakashi/android_device_motorola_berlin.git"
+DT_BRANCH="arrow-13"
 
 VT_LINK=""
 
-KERNEL_SRC=""
-KERNEL_PATH=""
+KERNEL_SRC="https://github.com/moto-sm7325/android_kernel_motorola_sm7325.git"
+KERNEL_PATH="kernel/${OEM}/${DEVICE}"
 
 DEPS=(
 	""
@@ -32,7 +32,7 @@ DEPS=(
 
 # Generate Vendor tree?
 GEN_VT=true
-DUMP_LINK="http://code.input.sh/DumprX/unowhy/Y10G001S4M.git"
+DUMP_LINK="https://dumps.tadiphone.dev/dumps/motorola/berlin.git"
 DUMP_PATH="$HOME/dumps/${DEVICE}"
 
 }
