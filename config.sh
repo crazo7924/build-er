@@ -7,8 +7,8 @@ export MANIFEST="https://github.com/crdroidandroid/android.git"
 export MANIFEST_BRANCH="12.1"
 
 # Device info
-export DEVICE="evergo"
-export OEM="xiaomi"
+export DEVICE="garden"
+export OEM="Redmi"
 
 # Lunch combo and Build target
 export LUNCH_COMBO="lineage_garden-userdebug"
