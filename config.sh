@@ -3,42 +3,37 @@
 #
 
 # Manifest
-export MANIFEST="https://github.com/ArrowOS/android_manifest.git"
-export MANIFEST_BRANCH="arrow-12.1"
+export MANIFEST="https://github.com/crdroidandroid/android.git"
+export MANIFEST_BRANCH="12.1"
 
 # Device info
 export DEVICE="evergo"
 export OEM="xiaomi"
 
 # Lunch combo and Build target
-export LUNCH_COMBO="arrow_evergo-eng"
+export LUNCH_COMBO="lineage_garden-userdebug"
 export TARGET="bacon"
 
 # Our output file
-OUTPUT="Arrow-*.zip"
+OUTPUT="CrDroid-*.zip"
 
 # Device trees and dependencies
-DT_LINK="https://github.com/Xiaomi-MT6833/device_xiaomi_evergo.git"
-DT_BRANCH=""
+DT_LINK="https://github.com/sergeantkakashi/android_device_xiaomi_garden.git"
+DT_BRANCH="11"
 
-VT_LINK=""
-
-KERNEL_SRC="https://github.com/PixelExperience-Devices/kernel_redmi_rosemary.git"
+VT_LINK="https://github.com/Mayuri-Chan/proprietary_vendor_xiaomi_garden.git"
+VT_BRANCH= "11"
+KERNEL_SRC="https://github.com/MiCode/Xiaomi_Kernel_OpenSource.git -b dandelion-q-oss"
 KERNEL_PATH="kernel/${OEM}/${DEVICE}"
 
 DEPS=(
-	"https://github.com/ArrowOS-Devices/android_hardware_xiaomi.git -b arrow-12.1 hardware/xiaomi"
+	"https://github.com/crdroidandroid/android_hardware_xiaomi.git -b 12.1 hardware/xiaomi"
 )
 
 # Generate Vendor tree?
-GEN_VT=true
-DUMP_LINK="https://gitlab.com/Android-Dumps/redmi/evergo.git"
+GEN_VT=false
+DUMP_LINK="https://gitlab.com/Android-Dumps/redmi/dandelion.git"
 DUMP_PATH="$HOME/dumps/${DEVICE}"
-
-# Extra Command
-extra_cmd_function(){
-	sed -i 's/rosemary/evergo/g' device/xiaomi/evergo/BoardConfig.mk
-}
 
 EXTRA_CMD=extra_cmd_function;
 
