@@ -22,7 +22,7 @@ cd ${SYNC_PATH}
 if [ -z "${DT_BRANCH}" ]; then
 	git clone ${DT_LINK} device/${OEM}/${DEVICE}
 else
-	git clond ${DT_LINK} -b ${DT_BRANCH} device/${OEM}/${DEVICE}
+	git clone ${DT_LINK} -b ${DT_BRANCH} device/${OEM}/${DEVICE}
 fi
 
 # Clone vendor tree
