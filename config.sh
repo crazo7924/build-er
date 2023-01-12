@@ -3,32 +3,29 @@
 #
 
 # Manifest
-export MANIFEST="https://github.com/crdroidandroid/android.git"
-export MANIFEST_BRANCH="12.1"
+export MANIFEST="https://github.com/LineageOS/android.git"
+export MANIFEST_BRANCH="lineage-20.0"
 
 # Device info
-export DEVICE="garden"
-export OEM="Redmi"
+export DEVICE="apollob"
+export OEM="realme"
 
 # Lunch combo and Build target
-export LUNCH_COMBO="lineage_garden-userdebug"
+export LUNCH_COMBO="lineage_apollob-userdebug"
 export TARGET="bacon"
 
 # Our output file
-OUTPUT="CrDroid-*.zip"
+OUTPUT="Lineage-*.zip"
 
 # Device trees and dependencies
-DT_LINK="https://github.com/sergeantkakashi/android_device_xiaomi_garden.git"
-DT_BRANCH="11"
+DT_LINK="https://github.com/realme-apollob-dev/android_device_realme_apollob.git"
+DT_BRANCH="lineage-20.0"
 
 VT_LINK="https://github.com/Mayuri-Chan/proprietary_vendor_xiaomi_garden.git"
-VT_BRANCH= "11"
-KERNEL_SRC="https://github.com/MiCode/Xiaomi_Kernel_OpenSource.git -b dandelion-q-oss"
-KERNEL_PATH="kernel/${OEM}/${DEVICE}"
+VT_BRANCH= "lineage-20.0"
 
-DEPS=(
-	"https://github.com/crdroidandroid/android_hardware_xiaomi.git -b 12.1 hardware/xiaomi"
-)
+KERNEL_SRC="https://github.com/realme-apollob-dev/android_kernel_realme_mt6833.git -b android-12.1"
+KERNEL_PATH="kernel/${OEM}/${DEVICE}"
 
 # Generate Vendor tree?
 GEN_VT=false
