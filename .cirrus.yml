@@ -10,6 +10,7 @@ env:
 
 # Our task
 task:
+  trigger_type: manual
   name: "AOSP Buildbot"
   timeout_in: 240m
   container:
