@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# What's our project's root directory?
-PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." >/dev/null && pwd )"
-
 # Source helpers
-for helper in $(ls ${PROJECT_DIR}/helpers/*.sh); do
+for helper in $(ls ${CIRRUS_WORKING_DIR}/helpers/*.sh); do
 	info "Including helpers/${helper}..."
 	source "${helper}"
 done
