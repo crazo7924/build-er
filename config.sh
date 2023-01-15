@@ -27,6 +27,7 @@ DEPS=(
         "https://github.com/realme-apollob-dev/android_device_mediatek_sepolicy_vndr.git device/mediatek/sepolicy_vndr"
         "https://github.com/realme-apollob-dev/android_packages_apps_RealmeParts.git packages/apps/RealmeParts" 
         "https://github.com/realme-apollob-dev/android_kernel_realme_mt6833_vendor.git kernel/realme/vendor" 
+        "https://github.com/realme-apollob-dev/android_kernel_realme_mt6833.git kernel/realme/mt6833"
 )
 
 KERNEL_SRC="https://github.com/realme-apollob-dev/android_kernel_realme_mt6833.git -b android-12.1"
