@@ -30,7 +30,7 @@ DEPS=(
 )
 
 KERNEL_SRC="https://github.com/realme-apollob-dev/android_kernel_realme_mt6833.git -b android-12.1"
-KERNEL_PATH="kernel/${OEM}/${DEVICE}"
+KERNEL_PATH="kernel/realme/mt6833"
 
 # Generate Vendor tree?
 GEN_VT=true
