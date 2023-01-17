@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source helpers
-for helper in $(ls ${CIRRUS_WORKING_DIR}/helpers/*.sh); do
+for helper in $(ls ${HOME}/helpers/*.sh); do
 	info "Including ${helper}..."
 	source "${helper}"
 done
